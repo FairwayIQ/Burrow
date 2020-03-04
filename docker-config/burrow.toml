@@ -21,14 +21,5 @@ group-blacklist="^(console-consumer-|python-kafka-consumer-).*$"
 group-whitelist=""
 client-profile="msk"
 
-#[consumer.local_zk]
-#class-name="kafka_zk"
-#cluster="local"
-#servers=[ "zookeeper:2181" ]
-#zookeeper-path="/local"
-#zookeeper-timeout=30
-#group-blacklist="^(console-consumer-|python-kafka-consumer-).*$"
-#group-whitelist=""
-
 [httpserver.default]
 address=":8000"
