@@ -19,6 +19,7 @@ cluster="local"
 servers=[ "kafka:9092" ]
 group-blacklist="^(console-consumer-|python-kafka-consumer-).*$"
 group-whitelist=""
+client-profile="msk"
 
 #[consumer.local_zk]
 #class-name="kafka_zk"
