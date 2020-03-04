@@ -20,6 +20,7 @@ servers=[ "kafka:9092" ]
 group-blacklist="^(console-consumer-|python-kafka-consumer-).*$"
 group-whitelist=""
 client-profile="msk"
+start-latest=true
 
 [httpserver.default]
 address=":8000"
