@@ -3,7 +3,11 @@ servers=[ "zookeeper:2181" ]
 timeout=6
 root-path="/burrow"
 
+[client-profile.msk]
+kafka-version="2.3.0"
+
 [cluster.local]
+client-profile="msk"
 class-name="kafka"
 servers=[ "kafka:9092" ]
 topic-refresh=60
@@ -16,14 +20,14 @@ servers=[ "kafka:9092" ]
 group-blacklist="^(console-consumer-|python-kafka-consumer-).*$"
 group-whitelist=""
 
-[consumer.local_zk]
-class-name="kafka_zk"
-cluster="local"
-servers=[ "zookeeper:2181" ]
-zookeeper-path="/local"
-zookeeper-timeout=30
-group-blacklist="^(console-consumer-|python-kafka-consumer-).*$"
-group-whitelist=""
+#[consumer.local_zk]
+#class-name="kafka_zk"
+#cluster="local"
+#servers=[ "zookeeper:2181" ]
+#zookeeper-path="/local"
+#zookeeper-timeout=30
+#group-blacklist="^(console-consumer-|python-kafka-consumer-).*$"
+#group-whitelist=""
 
 [httpserver.default]
 address=":8000"
